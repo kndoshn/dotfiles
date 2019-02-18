@@ -59,6 +59,7 @@ brew install anyenv
 brew install git-secrets
 brew install httpie
 brew install tmux
+brew install ccat
 
 brew cask install karabiner-elements
 brew cask install skitch
@@ -69,10 +70,8 @@ brew cask install google-chrome
 brew cask install cheatsheet
 brew cask install kindle
 brew cask install 1password
-brew cask install docker
 brew cask install visual-studio-code
 brew cask install appcleaner
-brew cask install paw
 
 brew tap brona/iproute2mac
 brew install iproute2mac
