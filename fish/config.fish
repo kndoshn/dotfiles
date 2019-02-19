@@ -1,5 +1,5 @@
-# rbenv
-status --is-interactive; and source (rbenv init -|psub)
+# anyenv
+eval (anyenv init - | source)
 
 # alias
 alias rm rmtrash

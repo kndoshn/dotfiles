@@ -46,7 +46,6 @@ fi
 ## Homebrew
 brew install carthage
 brew install cloc
-brew install fish
 brew install fzf
 brew install ghq
 brew install hub
@@ -55,11 +54,12 @@ brew install ruby
 brew install ruby-build
 brew install tree
 brew install vim --with-override-system-vi
-brew install anyenv
-brew install git-secrets
 brew install httpie
 brew install tmux
 brew install ccat
+brew install rmtrash
+brew install libiconv
+brew install htop
 
 brew cask install karabiner-elements
 brew cask install skitch
@@ -72,6 +72,29 @@ brew cask install kindle
 brew cask install 1password
 brew cask install visual-studio-code
 brew cask install appcleaner
+brew cask install clipy
 
 brew tap brona/iproute2mac
 brew install iproute2mac
+
+## anyenv
+brew install anyenv
+anyenv install --init
+
+## fish
+brew install fish
+curl https://git.io/fisher --create-dirs -sLo ~/.config/fish/functions/fisher.fish
+fisher add oh-my-fish/theme-bobthefish
+git clone https://github.com/powerline/fonts.git
+cd fonts
+./install.sh
+cd ../
+rm -rf fonts
+git clone https://github.com/dracula/iterm.git
+cd iterm
+open ./iterm/Dracula.itermcolors
+cd ..
+rm -rf iterm
+fish_update_completions
+echo "/usr/local/bin/fish" | sudo tee -a /etc/shells
+chsh -s /usr/local/bin/fish
