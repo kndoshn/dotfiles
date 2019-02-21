@@ -80,6 +80,7 @@ brew install iproute2mac
 ## anyenv
 brew install anyenv
 anyenv install --init
+anyenv install rbenv
 
 ## fish
 brew install fish
@@ -98,3 +99,9 @@ rm -rf iterm
 fish_update_completions
 echo "/usr/local/bin/fish" | sudo tee -a /etc/shells
 chsh -s /usr/local/bin/fish
+
+
+## android development
+brew cask install java
+brew cask install android-studio
+anyenv install jenv
