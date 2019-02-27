@@ -100,6 +100,9 @@ fish_update_completions
 echo "/usr/local/bin/fish" | sudo tee -a /etc/shells
 chsh -s /usr/local/bin/fish
 
+## git
+echo .DS_Store >> ~/.gitignore_global
+git config --global core.excludesfile ~/.gitignore_global
 
 ## android development
 brew cask install java
