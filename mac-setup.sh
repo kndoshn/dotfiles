@@ -32,6 +32,7 @@ killall Finder
 
 # Install
 gem update --system
+xcode-select --install
 
 if [ ! -x "`which brew`" ]; then
   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -73,6 +74,7 @@ brew cask install 1password
 brew cask install visual-studio-code
 brew cask install appcleaner
 brew cask install clipy
+brew cask install paw
 
 brew tap brona/iproute2mac
 brew install iproute2mac
