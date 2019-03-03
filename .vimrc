@@ -1,6 +1,9 @@
 set runtimepath+=~/.ghq/github.com/sheerun/vim-polyglot/
 filetype plugin indent on
 set backspace=indent,eol,start
+set shiftwidth=2
+set tabstop=2
+set expandtab
 
 " Encoding
 set encoding=utf-8
