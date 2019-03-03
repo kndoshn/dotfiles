@@ -61,6 +61,7 @@ brew install ccat
 brew install rmtrash
 brew install libiconv
 brew install htop
+brew install nmap
 
 brew cask install karabiner-elements
 brew cask install skitch
