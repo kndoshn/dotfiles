@@ -19,6 +19,7 @@ alias gr 'grep -i'
 alias free_memory 'echo \'(Before)\'; vm_stat | grep free; sudo purge; echo \'(After)\'; vm_stat | grep free'
 alias brewup 'brew update && brew upgrade && brew cask upgrade && brew cleanup && brew doctor'
 alias cat ccat
+alias listen 'sudo lsof -i -P | grep "LISTEN"'
 
 ## git alias
 alias git hub
@@ -33,7 +34,7 @@ alias gcae 'git commit --allow-empty -m Initial'
 alias gco 'git checkout'
 alias gcob 'git checkout -b'
 alias gm 'git checkout master'
-alias gdev 'git checkout develop'
+alias gcdev 'git checkout develop'
 alias grh 'git clean -df && git reset --hard'
 alias grhh 'git reset --hard HEAD^ && git clean -df'
 alias gd 'git diff'
