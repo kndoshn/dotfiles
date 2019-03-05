@@ -22,4 +22,3 @@ set ttymouse=xterm2
 
 " ESC
 inoremap <silent> jj <ESC>
-inoremap <silent> っj <ESC>
