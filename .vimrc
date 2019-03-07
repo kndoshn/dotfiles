@@ -4,6 +4,7 @@ set backspace=indent,eol,start
 set shiftwidth=2
 set tabstop=2
 set expandtab
+set clipboard+=unnamed
 
 " Encoding
 set encoding=utf-8
