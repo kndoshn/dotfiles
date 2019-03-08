@@ -36,11 +36,19 @@ set autoindent
 set smartindent
 set shiftwidth=4
 
+" Search
+set incsearch
+set ignorecase
+set smartcase
+set hlsearch
+
 " Appearance
 syntax enable
 set number
-set cursorline
 set display=lastline
+set showmatch
+set matchtime=1
+set cursorline
 
 " Mouse
 if has('mouse')
