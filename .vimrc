@@ -1,7 +1,5 @@
 set encoding=utf-8
 scriptencoding utf-8
-
-set runtimepath+=~/.ghq/github.com/sheerun/vim-polyglot/
 filetype plugin indent on
 set backspace=indent,eol,start
 set clipboard+=unnamed
@@ -18,6 +16,7 @@ endif
 
 call neobundle#begin(expand('~/.vim/bundle/'))
     NeoBundleFetch 'Shougo/neobundle.vim'
+    NeoBundle 'sheerun/vim-polyglot'
     NeoBundle 'tpope/vim-endwise'
     NeoBundle 'cohama/lexima.vim'
 call neobundle#end()
