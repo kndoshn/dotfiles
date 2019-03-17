@@ -3,6 +3,7 @@ scriptencoding utf-8
 filetype plugin indent on
 set backspace=indent,eol,start
 set clipboard+=unnamed
+set noswapfile
 
 " NeoBundle
 if has('vim_starting')
