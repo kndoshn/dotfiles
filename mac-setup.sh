@@ -54,7 +54,7 @@ brew install jq
 brew install ruby
 brew install ruby-build
 brew install tree
-brew install vim --with-override-system-vi
+brew install vim
 brew install httpie
 brew install tmux
 brew install ccat
@@ -62,6 +62,7 @@ brew install rmtrash
 brew install libiconv
 brew install htop
 brew install nmap
+brew install wget
 
 brew cask install karabiner-elements
 brew cask install skitch
