@@ -78,6 +78,7 @@ brew cask install appcleaner
 brew cask install clipy
 brew cask install paw
 brew cask install figma
+brew cask install dash
 
 brew tap brona/iproute2mac
 brew install iproute2mac
