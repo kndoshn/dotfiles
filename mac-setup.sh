@@ -63,7 +63,6 @@ brew install libiconv
 brew install htop
 brew install nmap
 brew install wget
-brew install tig
 
 brew cask install karabiner-elements
 brew cask install skitch
@@ -80,6 +79,7 @@ brew cask install clipy
 brew cask install paw
 brew cask install figma
 brew cask install dash
+brew cask install station
 
 brew tap brona/iproute2mac
 brew install iproute2mac
