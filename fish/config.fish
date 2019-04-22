@@ -20,6 +20,8 @@ alias free_memory 'echo \'(Before)\'; vm_stat | grep free; sudo purge; echo \'(A
 alias brewup 'brew update && brew upgrade && brew cask upgrade && brew cleanup && brew doctor'
 alias cat ccat
 alias listen 'sudo lsof -i -P | grep "LISTEN"'
+alias cp='cp -i'
+alias mv='mv -i'
 
 ## git alias
 alias git hub
@@ -84,3 +86,6 @@ alias rbp 'be rails_best_practices'
 
 ## node alias
 alias npm-clean 'rm -rf ./node_modules; npm cache clean; npm install'
+
+set -g fish_user_paths "/usr/local/opt/bison/bin" $fish_user_paths
+
