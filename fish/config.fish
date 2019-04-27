@@ -88,6 +88,8 @@ alias rbp 'be rails_best_practices'
 ## node alias
 alias npm-clean 'rm -rf ./node_modules; npm cache clean; npm install'
 
+## path
 set -g fish_user_paths "/usr/local/opt/bison/bin" $fish_user_paths
-
 set -g fish_user_paths "/usr/local/opt/mysql@5.7/bin" $fish_user_paths
+set -g fish_user_paths "/usr/local/opt/imagemagick@6/bin" $fish_user_paths
+
