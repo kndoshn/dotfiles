@@ -25,6 +25,7 @@ alias mv='mv -i'
 
 ## git alias
 alias git hub
+alias gcurrent "git branch | grep -e '^\\* ' | sed -e 's/^\\* //g'"
 alias g "cd (ghq root)/(ghq list | fzf)"
 alias gg 'ghq get'
 alias gs 'git status -sb'
@@ -41,10 +42,10 @@ alias grh 'git clean -df && git reset --hard'
 alias grhh 'git reset --hard HEAD^ && git clean -df'
 alias gd 'git diff'
 alias gl 'git pull && git fetch --prune && gbm'
+alias glf "git fetch && git reset --hard origin/(gcurrent)"
 alias glo 'git log --oneline --decorate --graph'
-alias gp 'git push'
 alias gpf 'git push -f'
-alias gpu 'git push -u origin HEAD'
+alias gp 'git push -u origin HEAD'
 alias gf 'git fetch --prune'
 alias grm 'git rebase master'
 
@@ -89,3 +90,4 @@ alias npm-clean 'rm -rf ./node_modules; npm cache clean; npm install'
 
 set -g fish_user_paths "/usr/local/opt/bison/bin" $fish_user_paths
 
+set -g fish_user_paths "/usr/local/opt/mysql@5.7/bin" $fish_user_paths
