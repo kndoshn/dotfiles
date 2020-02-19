@@ -22,6 +22,7 @@ alias cat ccat
 alias listen 'sudo lsof -i -P | grep "LISTEN"'
 alias cp='cp -i'
 alias mv='mv -i'
+alias cditto='cd ~/ghq/github.com/getditto/ditto'
 
 ## git alias
 alias git hub
@@ -66,6 +67,11 @@ alias cartboot 'carthage bootstrap --platform iOS --cache-builds'
 alias cartup 'carthage update --platform iOS --cache-builds'
 alias gbm "git branch --merged | grep -vE '^\*|master|develop' | xargs -I '{}' git branch -d '{}'"
 
+## flutter alias
+alias f 'flutter'
+alias frp 'flutter run --profile'
+alias fgen 'flutter pub run build_runner build'
+
 ## bundle alias
 alias b bundle
 alias be 'bundle exec'
@@ -92,4 +98,12 @@ alias npm-clean 'rm -rf ./node_modules; npm cache clean; npm install'
 set -g fish_user_paths "/usr/local/opt/bison/bin" $fish_user_paths
 set -g fish_user_paths "/usr/local/opt/mysql@5.7/bin" $fish_user_paths
 set -g fish_user_paths "/usr/local/opt/imagemagick@6/bin" $fish_user_paths
-
+set MECAB_PATH "/usr/lib/libmecab.so.2" $PATH
+set PATH ~/development/flutter/bin $PATH
+set --export ANDROID $HOME/Library/Android;
+set --export ANDROID_HOME $ANDROID/sdk;
+set -gx PATH $ANDROID_HOME/tools $PATH;
+set -gx PATH $ANDROID_HOME/tools/bin $PATH;
+set -gx PATH $ANDROID_HOME/platform-tools $PATH;
+set -g fish_user_paths "/usr/local/sbin" $fish_user_paths
+export PATH="$HOME/.cargo/bin:$PATH"

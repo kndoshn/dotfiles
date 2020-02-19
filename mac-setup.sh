@@ -70,16 +70,11 @@ brew cask install slack
 brew cask install alfred
 brew cask install iterm2
 brew cask install google-chrome
-brew cask install cheatsheet
 brew cask install kindle
 brew cask install 1password
 brew cask install visual-studio-code
 brew cask install appcleaner
-brew cask install clipy
 brew cask install paw
-brew cask install figma
-brew cask install dash
-brew cask install station
 
 brew tap brona/iproute2mac
 brew install iproute2mac
