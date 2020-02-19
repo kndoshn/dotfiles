@@ -75,6 +75,22 @@ brew cask install 1password
 brew cask install visual-studio-code
 brew cask install appcleaner
 brew cask install paw
+brew cask install android-studio
+brew cask install authy
+brew cask install charles
+brew cask install docker
+brew cask install fastlane
+brew cask install grammarly
+brew cask install java
+brew cask install microsoft-powerpoint
+brew cask install microsoft-teams
+brew cask install now
+brew cask install onedrive
+brew cask install sequel-pro
+brew cask install sketch
+brew cask install tableplus
+brew cask install webex-meetings
+brew cask install zoomus
 
 brew tap brona/iproute2mac
 brew install iproute2mac
