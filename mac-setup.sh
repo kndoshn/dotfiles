@@ -80,7 +80,6 @@ brew cask install authy
 brew cask install charles
 brew cask install docker
 brew cask install fastlane
-brew cask install grammarly
 brew cask install java
 brew cask install microsoft-powerpoint
 brew cask install microsoft-teams

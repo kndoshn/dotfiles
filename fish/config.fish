@@ -7,11 +7,12 @@ alias vi '/usr/bin/vim'
 alias xdd 'rm ~/Library/Developer/Xcode/DerivedData/*'
 alias memo 'vim ~/memo.md'
 alias om 'open ~/memo.md'
-alias fishconfig 'vim ~/.config/fish/config.fish'
+alias fishconfig 'code ~/.config/fish/config.fish'
 alias sourceconfig 'source ~/.config/fish/config.fish'
 alias cdd 'cd ~/Desktop'
-alias readme 'vim README.md'
-alias gemfile 'vim Gemfile'
+alias readme 'code README.md'
+alias gemfile 'code Gemfile'
+alias makefile 'code Makefile'
 alias la 'ls -alF'
 alias ll 'ls -lF'
 alias gr grep
@@ -96,12 +97,11 @@ alias npm-clean 'rm -rf ./node_modules; npm cache clean; npm install'
 
 ## path
 set -g fish_user_paths "/usr/local/opt/bison/bin" $fish_user_paths
-set -g fish_user_paths "/usr/local/opt/mysql@5.7/bin" $fish_user_paths
-set -g fish_user_paths "/usr/local/opt/imagemagick@6/bin" $fish_user_paths
 set MECAB_PATH "/usr/lib/libmecab.so.2" $PATH
 set PATH ~/development/flutter/bin $PATH
 set --export ANDROID $HOME/Library/Android;
 set --export ANDROID_HOME $ANDROID/sdk;
+set --export NDK_HOME $ANDROID/sdk/ndk/21.0.6113669;
 set -gx PATH $ANDROID_HOME/tools $PATH;
 set -gx PATH $ANDROID_HOME/tools/bin $PATH;
 set -gx PATH $ANDROID_HOME/platform-tools $PATH;
