@@ -101,7 +101,6 @@ set MECAB_PATH "/usr/lib/libmecab.so.2" $PATH
 set PATH ~/development/flutter/bin $PATH
 set --export ANDROID $HOME/Library/Android;
 set --export ANDROID_HOME $ANDROID/sdk;
-set --export NDK_HOME $ANDROID/sdk/ndk/21.0.6113669;
 set -gx PATH $ANDROID_HOME/tools $PATH;
 set -gx PATH $ANDROID_HOME/tools/bin $PATH;
 set -gx PATH $ANDROID_HOME/platform-tools $PATH;
