@@ -19,7 +19,7 @@ alias gr grep
 alias gr 'grep -i'
 alias free_memory 'echo \'(Before)\'; vm_stat | grep free; sudo purge; echo \'(After)\'; vm_stat | grep free'
 alias brewup 'brew update && brew upgrade && brew cask upgrade && brew cleanup && brew doctor'
-alias cat ccat
+alias cat bat
 alias listen 'sudo lsof -i -P | grep "LISTEN"'
 alias cp='cp -i'
 alias mv='mv -i'

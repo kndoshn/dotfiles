@@ -57,7 +57,7 @@ brew install tree
 brew install vim
 brew install httpie
 brew install tmux
-brew install ccat
+brew install bat
 brew install rmtrash
 brew install libiconv
 brew install htop
