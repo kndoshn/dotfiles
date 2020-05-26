@@ -63,6 +63,7 @@ brew install libiconv
 brew install htop
 brew install nmap
 brew install wget
+brew install fd
 
 brew cask install karabiner-elements
 brew cask install skitch

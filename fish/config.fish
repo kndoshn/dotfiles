@@ -46,7 +46,7 @@ alias gd 'git diff'
 alias gl 'git pull && git fetch --prune && gbm'
 alias glf "git fetch && git reset --hard origin/(gcurrent)"
 alias glo 'git log --oneline --decorate --graph'
-alias gpf 'git push -f'
+alias gpf 'git push --force-with-lease'
 alias gp 'git push -u origin HEAD'
 alias gf 'git fetch --prune'
 alias grm 'git rebase master'
