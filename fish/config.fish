@@ -18,7 +18,7 @@ alias ll 'ls -lF'
 alias gr grep
 alias gr 'grep -i'
 alias free_memory 'echo \'(Before)\'; vm_stat | grep free; sudo purge; echo \'(After)\'; vm_stat | grep free'
-alias brewup 'brew update && brew upgrade && brew upgrade --cask && brew cleanup && brew doctor'
+alias brewup 'brew update && brew upgrade && brew cleanup && brew doctor'
 alias cat bat
 alias listen 'sudo lsof -i -P | grep "LISTEN"'
 alias cp='cp -i'
