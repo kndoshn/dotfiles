@@ -24,6 +24,9 @@ alias listen 'sudo lsof -i -P | grep "LISTEN"'
 alias cp='cp -i'
 alias mv='mv -i'
 alias cditto='cd ~/ghq/github.com/getditto/ditto'
+alias dcom='docker-compose'
+alias dbe='docker-compose run app bundle exec'
+alias dbi='docker-compose run app bundle install'
 
 ## git alias
 alias git hub
@@ -81,7 +84,6 @@ alias bu 'bundle update'
 alias bl 'bundle list'
 
 ## rails alias
-alias rails 'echo \"Use \'bundle exec rails\'\"'
 alias rs 'be rails s'
 alias rn 'be rails new'
 alias rdc 'be rails db:create'
@@ -91,6 +93,7 @@ alias rds 'be rails db:seed'
 alias rdd 'be rails db:drop'
 alias rr 'be rails routes'
 alias rbp 'be rails_best_practices'
+alias dcr 'docker-compose run app rails'
 
 ## node alias
 alias npm-clean 'rm -rf ./node_modules; npm cache clean; npm install'
