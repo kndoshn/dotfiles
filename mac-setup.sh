@@ -1,5 +1,8 @@
 #!/bin/sh
 
+## zsh-completions
+chmod -R go-w /opt/homebrew/share
+
 ## Make Symbolic Links to Local
 . links.sh
 
@@ -52,6 +55,9 @@ brew install vim
 brew install bat
 brew install trash
 brew install fd
+brew install zsh
+brew install zsh-completions
+brew install zsh-autosuggestions
 
 brew install --cask karabiner-elements
 brew install --cask skitch
