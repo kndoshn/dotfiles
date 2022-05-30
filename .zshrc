@@ -1,5 +1,6 @@
 source $HOME/.zshenv
 eval "$(anyenv init -)"
+eval "$(rbenv init -)"
 
 # alias
 alias vi='/usr/bin/vim'
@@ -43,6 +44,7 @@ alias gpf='git push --force-with-lease'
 alias gp='git push -u origin HEAD'
 alias gf='git fetch --prune'
 alias grm='git rebase master'
+alias gsub='git submodule update --init --recursive && git submodule sync'
 
 ## bundle alias
 alias b='bundle'
@@ -65,3 +67,12 @@ alias dcr='docker-compose run app rails'
 
 ## node alias
 alias npm-clean='rm -rf ./node_modules; npm cache clean; npm install'
+
+
+## import other zsh files
+ZSH_DIR="${HOME}/.zsh"
+if [ -d $ZSH_DIR ] && [ -r $ZSH_DIR ] && [ -x $ZSH_DIR ]; then
+    for file in ${ZSH_DIR}/**/*.zsh; do
+        [ -r $file ] && source $file
+    done
+fi
