@@ -1,5 +1,8 @@
 #!/bin/sh
 
+## Make Symbolic Links to Local
+. links.sh
+
 ## Dock
 defaults write com.apple.dock autohide -bool true
 defaults write com.apple.dock persistent-apps -array
@@ -40,89 +43,39 @@ if [ ! -x "`which brew`" ]; then
   brew upgrade --all --cleanup
 fi
 
-if [ ! -x "`which pod`" ]; then
-  sudo gem install -n /usr/local/bin cocoapods
-fi
-
 ## Homebrew
 brew install carthage
-brew install cloc
-brew install fzf
-brew install ghq
-brew install hub
+brew install gh
 brew install jq
-brew install ruby
 brew install ruby-build
-brew install tree
 brew install vim
-brew install httpie
-brew install tmux
 brew install bat
-brew install rmtrash
-brew install libiconv
-brew install htop
-brew install nmap
-brew install wget
+brew install trash
 brew install fd
 
-brew cask install karabiner-elements
-brew cask install skitch
-brew cask install slack
-brew cask install alfred
-brew cask install iterm2
-brew cask install google-chrome
-brew cask install kindle
-brew cask install 1password
-brew cask install visual-studio-code
-brew cask install appcleaner
-brew cask install paw
-brew cask install android-studio
-brew cask install authy
-brew cask install charles
-brew cask install docker
-brew cask install fastlane
-brew cask install java
-brew cask install microsoft-powerpoint
-brew cask install microsoft-teams
-brew cask install now
-brew cask install onedrive
-brew cask install sequel-pro
-brew cask install sketch
-brew cask install tableplus
-brew cask install webex-meetings
-brew cask install zoomus
-
-brew tap brona/iproute2mac
-brew install iproute2mac
+brew install --cask karabiner-elements
+brew install --cask skitch
+brew install --cask slack
+brew install --cask alfred
+brew install --cask iterm2
+brew install --cask google-chrome
+brew install --cask kindle
+brew install --cask 1password
+brew install --cask visual-studio-code
+brew install --cask appcleaner
+brew install --cask android-studio
+brew install --cask authy
+brew install --cask java
+brew install --cask microsoft-powerpoint
+brew install --cask microsoft-teams
+brew install --cask webex-meetings
+brew install --cask zoom
 
 ## anyenv
 brew install anyenv
 anyenv install --init
 anyenv install rbenv
 
-## fish
-brew install fish
-curl https://git.io/fisher --create-dirs -sLo ~/.config/fish/functions/fisher.fish
-fisher add oh-my-fish/theme-bobthefish
-git clone https://github.com/powerline/fonts.git
-cd fonts
-./install.sh
-cd ../
-rm -rf fonts
-git clone https://github.com/dracula/iterm.git
-cd iterm
-open ./iterm/Dracula.itermcolors
-cd ..
-rm -rf iterm
-fish_update_completions
-echo "/usr/local/bin/fish" | sudo tee -a /etc/shells
-chsh -s /usr/local/bin/fish
-
 ## git
 echo .DS_Store >> ~/.gitignore_global
 git config --global core.excludesfile ~/.gitignore_global
-
-## android development
-brew cask install java
-brew cask install android-studio
-anyenv install jenv
