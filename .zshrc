@@ -1,8 +1,11 @@
+# Fig pre block. Keep at the top of this file.
+[[ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]] && . "$HOME/.fig/shell/zshrc.pre.zsh"
 source $HOME/.zshenv
+export PATH="/opt/homebrew/opt/openjdk@11/bin:$PATH"
 eval "$(anyenv init -)"
 eval "$(rbenv init -)"
 
-# alias
+## alias
 alias vi='/usr/bin/vim'
 alias xdd='rm ~/Library/Developer/Xcode/DerivedData/*'
 alias cdd='cd ~/Desktop'
@@ -20,6 +23,10 @@ alias dcom='docker-compose'
 alias dbe='docker-compose run app bundle exec'
 alias dbi='docker-compose run app bundle install'
 alias rm='trash -F'
+
+## ditto
+alias cditto='cd ~/repos/ditto-organization/ditto'
+alias cdemo='cd ~/repos/ditto-organization/demo-apps'
 
 ## git alias
 alias gcurrent="git branch | grep -e '^\\* ' | sed -e 's/^\\* //g'"
@@ -45,6 +52,7 @@ alias gp='git push -u origin HEAD'
 alias gf='git fetch --prune'
 alias grm='git rebase master'
 alias gsub='git submodule update --init --recursive && git submodule sync'
+alias gtag='git tag -l --sort=-v:refname | head -n 25'
 
 ## bundle alias
 alias b='bundle'
@@ -76,3 +84,6 @@ if [ -d $ZSH_DIR ] && [ -r $ZSH_DIR ] && [ -x $ZSH_DIR ]; then
         [ -r $file ] && source $file
     done
 fi
+
+# Fig post block. Keep at the bottom of this file.
+[[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && . "$HOME/.fig/shell/zshrc.post.zsh"

@@ -76,6 +76,7 @@ brew install --cask microsoft-powerpoint
 brew install --cask microsoft-teams
 brew install --cask webex-meetings
 brew install --cask zoom
+brew install --cask fig
 
 ## anyenv
 brew install anyenv
