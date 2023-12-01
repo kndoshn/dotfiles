@@ -1,7 +1,8 @@
 # Fig pre block. Keep at the top of this file.
-[[ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]] && . "$HOME/.fig/shell/zshrc.pre.zsh"
+[[ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.pre.zsh"
 source $HOME/.zshenv
 export PATH="/opt/homebrew/opt/openjdk@11/bin:$PATH"
+export PATH="/Users/kndoshn/.deno/bin:$PATH"
 eval "$(anyenv init -)"
 eval "$(rbenv init -)"
 
@@ -25,7 +26,7 @@ alias dbi='docker-compose run app bundle install'
 alias rm='trash -F'
 
 ## ditto
-alias cditto='cd ~/repos/ditto-organization/ditto'
+alias cditto='cd ~/repos/ditto-organization'
 alias cdemo='cd ~/repos/ditto-organization/demo-apps'
 
 ## git alias
@@ -38,7 +39,7 @@ alias gc='git commit -m'
 alias gcae='git commit --allow-empty -m Initial'
 alias gco='git checkout'
 alias gcob='git checkout -b'
-alias gm='git checkout master'
+alias gm='git checkout main'
 alias gcod='git checkout develop'
 alias grh='git clean -df && git reset --hard'
 alias grhh='git reset --hard HEAD^ && git clean -df'
@@ -53,6 +54,7 @@ alias gf='git fetch --prune'
 alias grm='git rebase master'
 alias gsub='git submodule update --init --recursive && git submodule sync'
 alias gtag='git tag -l --sort=-v:refname | head -n 25'
+alias ghb='gh browse'
 
 ## bundle alias
 alias b='bundle'
@@ -86,4 +88,7 @@ if [ -d $ZSH_DIR ] && [ -r $ZSH_DIR ] && [ -x $ZSH_DIR ]; then
 fi
 
 # Fig post block. Keep at the bottom of this file.
-[[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && . "$HOME/.fig/shell/zshrc.post.zsh"
+[[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
+
+# Flutter
+export PATH=~/flutter/bin:$PATH
