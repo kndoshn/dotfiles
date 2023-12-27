@@ -9,7 +9,7 @@ eval "$(rbenv init -)"
 ## alias
 alias vi='/usr/bin/vim'
 alias xdd='rm ~/Library/Developer/Xcode/DerivedData/*'
-alias cdd='cd ~/Desktop'
+alias cdd='cd ~/repos/ditto/'
 alias readme='code README.md'
 alias gemfile='code Gemfile'
 alias makefile='code Makefile'
@@ -23,10 +23,10 @@ alias mv='mv -i'
 alias dcom='docker-compose'
 alias dbe='docker-compose run app bundle exec'
 alias dbi='docker-compose run app bundle install'
-alias rm='trash -F'
+alias rm='trash'
 
 ## ditto
-alias cditto='cd ~/repos/ditto-organization'
+alias cditto='cd ~/repos/ditto'
 alias cdemo='cd ~/repos/ditto-organization/demo-apps'
 
 ## git alias
@@ -80,15 +80,19 @@ alias npm-clean='rm -rf ./node_modules; npm cache clean; npm install'
 
 
 ## import other zsh files
-ZSH_DIR="${HOME}/.zsh"
-if [ -d $ZSH_DIR ] && [ -r $ZSH_DIR ] && [ -x $ZSH_DIR ]; then
-    for file in ${ZSH_DIR}/**/*.zsh; do
-        [ -r $file ] && source $file
-    done
-fi
+# ZSH_DIR="${HOME}/.zsh"
+# if [ -d $ZSH_DIR ] && [ -r $ZSH_DIR ] && [ -x $ZSH_DIR ]; then
+#     for file in ${ZSH_DIR}/**/*.zsh; do
+#         [ -r $file ] && source $file
+#     done
+# fi
 
 # Fig post block. Keep at the bottom of this file.
-[[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
+# [[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
 
 # Flutter
 export PATH=~/flutter/bin:$PATH
+
+# Others
+export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
+export PATH=$PATH:/path/to/android/sdk/tools/bin

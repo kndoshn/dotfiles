@@ -1,7 +1,7 @@
 #!/bin/sh
 
 ## zsh-completions
-chmod -R go-w /opt/homebrew/share
+# chmod -R go-w /opt/homebrew/share
 
 ## Make Symbolic Links to Local
 . links.sh
@@ -37,7 +37,7 @@ killall Dock
 killall Finder
 
 # Install
-gem update --system
+# gem update --system
 xcode-select --install
 
 if [ ! -x "`which brew`" ]; then
@@ -47,23 +47,20 @@ if [ ! -x "`which brew`" ]; then
 fi
 
 ## Homebrew
-brew install carthage
 brew install gh
 brew install jq
 brew install ruby-build
 brew install vim
 brew install bat
 brew install trash
-brew install fd
+# brew install fd
 brew install zsh
-brew install zsh-completions
-brew install zsh-autosuggestions
+# brew install zsh-completions
+# brew install zsh-autosuggestions
 
 brew install --cask karabiner-elements
 brew install --cask skitch
 brew install --cask slack
-brew install --cask alfred
-brew install --cask iterm2
 brew install --cask google-chrome
 brew install --cask kindle
 brew install --cask 1password
@@ -76,7 +73,7 @@ brew install --cask microsoft-powerpoint
 brew install --cask microsoft-teams
 brew install --cask webex-meetings
 brew install --cask zoom
-brew install --cask fig
+# brew install --cask fig
 
 ## anyenv
 brew install anyenv
