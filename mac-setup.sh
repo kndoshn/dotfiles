@@ -1,10 +1,9 @@
 #!/bin/sh
-
-## zsh-completions
-# chmod -R go-w /opt/homebrew/share
+set -e
+SCRIPT_DIR=$(cd "$(dirname "$0")" && pwd)
 
 ## Make Symbolic Links to Local
-. links.sh
+. "$SCRIPT_DIR/links.sh"
 
 ## Dock
 defaults write com.apple.dock autohide -bool true
@@ -41,44 +40,23 @@ killall Finder
 xcode-select --install
 
 if [ ! -x "`which brew`" ]; then
-  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
   brew update
-  brew upgrade --all --cleanup
+  brew upgrade
 fi
 
 ## Homebrew
+brew install git
 brew install gh
 brew install jq
-brew install ruby-build
 brew install vim
 brew install bat
 brew install trash
-# brew install fd
 brew install zsh
-# brew install zsh-completions
-# brew install zsh-autosuggestions
-
-brew install --cask karabiner-elements
-brew install --cask skitch
-brew install --cask slack
-brew install --cask google-chrome
-brew install --cask kindle
-brew install --cask 1password
-brew install --cask visual-studio-code
-brew install --cask appcleaner
-brew install --cask android-studio
-brew install --cask authy
-brew install --cask java
-brew install --cask microsoft-powerpoint
-brew install --cask microsoft-teams
-brew install --cask webex-meetings
-brew install --cask zoom
-# brew install --cask fig
 
 ## anyenv
 brew install anyenv
 anyenv install --init
-anyenv install rbenv
 
 ## git
 echo .DS_Store >> ~/.gitignore_global

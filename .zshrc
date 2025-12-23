@@ -2,9 +2,8 @@
 [[ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.pre.zsh"
 source $HOME/.zshenv
 export PATH="/opt/homebrew/opt/openjdk@11/bin:$PATH"
-export PATH="/Users/kndoshn/.deno/bin:$PATH"
+export PATH="$HOME/.deno/bin:$PATH"
 eval "$(anyenv init -)"
-eval "$(rbenv init -)"
 
 ## alias
 alias vi='/usr/bin/vim'
@@ -25,10 +24,6 @@ alias dbe='docker-compose run app bundle exec'
 alias dbi='docker-compose run app bundle install'
 alias rm='trash'
 
-## ditto
-alias cditto='cd ~/repos/ditto'
-alias cdemo='cd ~/repos/ditto-organization/demo-apps'
-
 ## git alias
 alias gcurrent="git branch | grep -e '^\\* ' | sed -e 's/^\\* //g'"
 alias gs='git status -sb'
@@ -46,7 +41,7 @@ alias grhh='git reset --hard HEAD^ && git clean -df'
 alias gd='git diff'
 alias gl='git pull && git fetch --prune && gbm'
 alias gbm="git branch --merged | grep -vE '^\*|master|develop' | xargs -I '{}' git branch -d '{}'"
-alias glf="git fetch && git reset --hard origin/(gcurrent)"
+alias glf='git fetch && git reset --hard origin/$(gcurrent)'
 alias glo='git log --oneline --decorate --graph'
 alias gpf='git push --force-with-lease'
 alias gp='git push -u origin HEAD'
@@ -76,23 +71,8 @@ alias rbp='be rails_best_practices'
 alias dcr='docker-compose run app rails'
 
 ## node alias
-alias npm-clean='rm -rf ./node_modules; npm cache clean; npm install'
-
-
-## import other zsh files
-# ZSH_DIR="${HOME}/.zsh"
-# if [ -d $ZSH_DIR ] && [ -r $ZSH_DIR ] && [ -x $ZSH_DIR ]; then
-#     for file in ${ZSH_DIR}/**/*.zsh; do
-#         [ -r $file ] && source $file
-#     done
-# fi
-
-# Fig post block. Keep at the bottom of this file.
-# [[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
+alias npm-clean='rm -rf ./node_modules && npm cache clean --force && npm install'
 
 # Flutter
 export PATH=~/flutter/bin:$PATH
 
-# Others
-export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
-export PATH=$PATH:/path/to/android/sdk/tools/bin

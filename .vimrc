@@ -5,23 +5,18 @@ set backspace=indent,eol,start
 set clipboard+=unnamed
 set noswapfile
 
-" NeoBundle
-if has('vim_starting')
-    set runtimepath+=~/.vim/bundle/neobundle.vim/
-
-    if !isdirectory(expand("~/.vim/bundle/neobundle.vim/"))
-        echo "install NeoBundle..."
-        :call system("git clone https://github.com/Shougo/neobundle.vim.git ~/.vim/bundle/neobundle.vim")
-    endif
+" vim-plug
+let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
+if empty(glob(data_dir . '/autoload/plug.vim'))
+  silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+  autocmd VimEnter * PlugInstall --sync | quit
 endif
 
-call neobundle#begin(expand('~/.vim/bundle/'))
-    NeoBundleFetch 'Shougo/neobundle.vim'
-    NeoBundle 'sheerun/vim-polyglot'
-    NeoBundle 'tpope/vim-endwise'
-    NeoBundle 'cohama/lexima.vim'
-call neobundle#end()
-NeoBundleCheck
+call plug#begin()
+  Plug 'sheerun/vim-polyglot'
+  Plug 'tpope/vim-endwise'
+  Plug 'cohama/lexima.vim'
+call plug#end()
 
 " Encoding
 set fileencoding=utf-8
