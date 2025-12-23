@@ -1,0 +1,34 @@
+[user]
+    # name = Your Name
+    # email = your@email.com
+
+[init]
+    defaultBranch = main
+
+[core]
+    excludesfile = ~/.gitignore_global
+    editor = vim
+    autocrlf = input
+    quotepath = false
+
+[pull]
+    rebase = false
+
+[push]
+    default = current
+    autoSetupRemote = true
+
+[fetch]
+    prune = true
+
+[merge]
+    ff = false
+
+[alias]
+    st = status -sb
+    co = checkout
+    br = branch -a
+    lg = log --oneline --decorate --graph
+
+[color]
+    ui = auto

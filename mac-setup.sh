@@ -36,28 +36,28 @@ killall Dock
 killall Finder
 
 # Install
-# gem update --system
-xcode-select --install
 
-if [ ! -x "`which brew`" ]; then
+## Xcode Command Line Tools
+if ! xcode-select -p &>/dev/null; then
+  xcode-select --install
+fi
+
+## Homebrew
+if [ ! -x "$(which brew)" ]; then
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
   brew update
   brew upgrade
 fi
 
-## Homebrew
-brew install git
-brew install gh
-brew install jq
-brew install vim
-brew install bat
-brew install trash
-brew install zsh
+## Install packages via Brewfile
+brew bundle --file="$SCRIPT_DIR/Brewfile"
 
 ## anyenv
-brew install anyenv
-anyenv install --init
+if [ ! -d "$HOME/.anyenv" ]; then
+  anyenv install --init
+fi
 
-## git
-echo .DS_Store >> ~/.gitignore_global
-git config --global core.excludesfile ~/.gitignore_global
+## gitignore_global
+if ! grep -q "^\.DS_Store$" ~/.gitignore_global 2>/dev/null; then
+  echo .DS_Store >> ~/.gitignore_global
+fi
