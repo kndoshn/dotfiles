@@ -4,6 +4,12 @@ filetype plugin indent on
 set backspace=indent,eol,start
 set clipboard+=unnamed
 set noswapfile
+set nobackup
+set history=1000
+set scrolloff=5
+set wildmenu
+set wildmode=list:longest
+set ttimeoutlen=10
 
 " vim-plug
 let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
@@ -60,3 +66,18 @@ endif
 
 " ESC
 inoremap <silent> jj <ESC>
+
+" 検索ハイライト解除
+nnoremap <Esc><Esc> :nohlsearch<CR>
+
+" 表示行単位で移動（長い行で便利）
+nnoremap j gj
+nnoremap k gk
+
+" Cmd+S で保存（MacVim用）
+nnoremap <D-s> :w<CR>
+inoremap <D-s> <Esc>:w<CR>a
+
+" 行頭・行末移動を楽に
+nnoremap H ^
+nnoremap L $
