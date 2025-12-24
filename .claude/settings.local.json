@@ -4,7 +4,8 @@
       "Bash(brew info:*)",
       "Bash(fd:*)",
       "Bash(git add:*)",
-      "Bash(git commit:*)"
+      "Bash(git commit:*)",
+      "Bash(cat:*)"
     ]
   }
 }
