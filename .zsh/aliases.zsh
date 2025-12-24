@@ -1,4 +1,5 @@
 ## General aliases
+alias code='code .'
 alias vi='/usr/bin/vim'
 alias xdd='rm ~/Library/Developer/Xcode/DerivedData/*'
 alias cdd='cd ~/repos/ditto/'

@@ -25,3 +25,5 @@ if type brew &>/dev/null; then
     compinit
 fi
 
+# zoxide
+eval "$(zoxide init zsh)"
