@@ -14,34 +14,34 @@ alias cat=bat
 alias listen='sudo lsof -i -P | grep "LISTEN"'
 alias cp='cp -i'
 alias mv='mv -i'
-alias dcom='docker-compose'
-alias dbe='docker-compose run app bundle exec'
-alias dbi='docker-compose run app bundle install'
+alias dcom='docker compose'
+alias dbe='docker compose run app bundle exec'
+alias dbi='docker compose run app bundle install'
 alias rm='trash'
 
 ## git alias
-alias gcurrent="git branch | grep -e '^\\* ' | sed -e 's/^\\* //g'"
+alias gcurrent='git branch --show-current'
 alias gs='git status -sb'
 alias gaa='git add -A'
 alias gb='git branch -a'
 alias gbd='git branch -D'
 alias gc='git commit -m'
 alias gcae='git commit --allow-empty -m Initial'
-alias gco='git checkout'
-alias gcob='git checkout -b'
-alias gm='git checkout main'
-alias gcod='git checkout develop'
+alias gco='git switch'
+alias gcob='git switch -c'
+alias gm='git switch main'
+alias gcod='git switch develop'
 alias grh='git clean -df && git reset --hard'
 alias grhh='git reset --hard HEAD^ && git clean -df'
 alias gd='git diff'
 alias gl='git pull && git fetch --prune && gbm'
-alias gbm="git branch --merged | grep -vE '^\*|master|develop' | xargs -I '{}' git branch -d '{}'"
+alias gbm="git branch --merged | grep -vE '^\*|main|master|develop' | xargs -I '{}' git branch -d '{}'"
 alias glf='git fetch && git reset --hard origin/$(gcurrent)'
 alias glo='git log --oneline --decorate --graph'
 alias gpf='git push --force-with-lease'
 alias gp='git push -u origin HEAD'
 alias gf='git fetch --prune'
-alias grm='git rebase master'
+alias grm='git rebase main'
 alias gsub='git submodule update --init --recursive && git submodule sync'
 alias gtag='git tag -l --sort=-v:refname | head -n 25'
 alias ghb='gh browse'
@@ -63,7 +63,17 @@ alias rds='be rails db:seed'
 alias rdd='be rails db:drop'
 alias rr='be rails routes'
 alias rbp='be rails_best_practices'
-alias dcr='docker-compose run app rails'
+alias dcr='docker compose run app rails'
 
 ## node alias
 alias npm-clean='rm -rf ./node_modules && npm cache clean --force && npm install'
+
+## directory navigation
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+
+## utilities
+alias path='echo $PATH | tr ":" "\n"'
+alias ports='lsof -i -P -n | grep LISTEN'
+alias myip='curl -s ifconfig.me'
