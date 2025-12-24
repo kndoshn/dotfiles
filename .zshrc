@@ -11,3 +11,17 @@ source $HOME/.zsh/aliases.zsh
 # Flutter
 export PATH=~/flutter/bin:$PATH
 
+# less (Homebrew)
+export PATH="$(brew --prefix)/opt/less/bin:$PATH"
+export DELTA_PAGER='less -R --mouse --wheel-lines=4'
+
+# eza completions
+export FPATH="/opt/homebrew/opt/eza/completions/zsh:$FPATH"
+
+# Homebrew completions
+if type brew &>/dev/null; then
+    FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
+    autoload -Uz compinit
+    compinit
+fi
+

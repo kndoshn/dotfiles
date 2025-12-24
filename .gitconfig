@@ -10,6 +10,16 @@
     editor = vim
     autocrlf = input
     quotepath = false
+    pager = delta
+
+[interactive]
+    diffFilter = delta --color-only
+
+[delta]
+    navigate = true
+    dark = true
+    side-by-side = true
+    line-numbers = true
 
 [pull]
     rebase = false
@@ -23,6 +33,7 @@
 
 [merge]
     ff = false
+    conflictStyle = zdiff3
 
 [alias]
     st = status -sb
