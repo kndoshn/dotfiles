@@ -5,7 +5,8 @@
       "Bash(fd:*)",
       "Bash(git add:*)",
       "Bash(git commit:*)",
-      "Bash(cat:*)"
+      "Bash(cat:*)",
+      "Bash(git config:*)"
     ]
   }
 }
