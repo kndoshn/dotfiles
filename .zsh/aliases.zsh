@@ -13,13 +13,21 @@ alias ll='eza -l --icons --git'
 alias lt='eza -T --icons'
 alias brewup='brew update && brew upgrade && brew cleanup && brew doctor'
 alias cat=bat
-alias listen='sudo lsof -i -P | grep "LISTEN"'
 alias cp='cp -i'
 alias mv='mv -i'
 alias dcom='docker compose'
 alias dbe='docker compose run app bundle exec'
 alias dbi='docker compose run app bundle install'
 alias rm='trash'
+
+## git wrapper
+git() {
+  if [[ "$1" == "init" ]]; then
+    command git "$@" && cp ~/.gitignore-template .gitignore
+  else
+    command git "$@"
+  fi
+}
 
 ## git alias
 alias gcurrent='git branch --show-current'

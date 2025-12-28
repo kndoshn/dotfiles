@@ -13,6 +13,7 @@ ln -sf ~/dotfiles/.vimrc ~/.vimrc
 # Git
 ln -sf ~/dotfiles/.gitconfig ~/.gitconfig
 ln -sf ~/dotfiles/.gitignore_global ~/.gitignore_global
+ln -sf ~/dotfiles/.gitignore-template ~/.gitignore-template
 
 # Claude Code
 ln -sf ~/dotfiles/claude/CLAUDE.md ~/.claude/CLAUDE.md
