@@ -11,8 +11,13 @@
       "Bash(git add:*)",
       "Bash(git commit:*)",
       "Bash(brew:*)",
-      "Bash(which:*)"
-    ]
+      "Bash(which:*)",
+      "Bash(brew info:*)",
+      "Bash(fd:*)",
+      "Bash(cat:*)",
+      "Bash(git config:*)"
+    ],
+    "defaultMode": "default"
   },
   "hooks": {
     "Stop": [
@@ -45,5 +50,6 @@
         ]
       }
     ]
-  }
+  },
+  "alwaysThinkingEnabled": true
 }

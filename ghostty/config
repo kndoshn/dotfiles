@@ -1,0 +1,11 @@
+# Visual
+desktop-notifications = true
+maximize = true
+theme = Mathias
+font-size = 15
+window-padding-x = 12
+window-padding-y = 8
+
+# Mouse
+right-click-action = copy-or-paste
+mouse-hide-while-typing = true

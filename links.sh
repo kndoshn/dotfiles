@@ -18,3 +18,6 @@ ln -sf ~/dotfiles/.gitignore-template ~/.gitignore-template
 # Claude Code
 ln -sf ~/dotfiles/claude/CLAUDE.md ~/.claude/CLAUDE.md
 ln -sf ~/dotfiles/claude/settings.json ~/.claude/settings.json
+
+# Ghostty
+ln -sf ~/dotfiles/ghostty/config ~/Library/Application\ Support/com.mitchellh.ghostty/config

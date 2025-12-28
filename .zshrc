@@ -7,6 +7,10 @@ eval "$(anyenv init -)"
 # Aliases
 source "$HOME/.zsh/aliases.zsh"
 
+# Prompt
+source "$HOME/.zsh/prompt_visual.zsh"
+source "$HOME/.zsh/git_prompt.zsh"
+
 # less
 export PATH="$BREW_PREFIX/opt/less/bin:$PATH"
 export DELTA_PAGER='less -R --mouse --wheel-lines=4'
