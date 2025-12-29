@@ -3,8 +3,12 @@
 # git ブランチ名を色付きで表示させるメソッド
 function rprompt-git-current-branch {
   local branch_name st branch_status
-  
-  branch='\ue0a0'
+
+  if [[ "$TERM_PROGRAM" == "Apple_Terminal" ]]; then
+    branch='*'
+  else
+    branch='\ue0a0'
+  fi
   color='%{\e[38;5;' #  文字色を設定
   green='114m%}'
   red='001m%}'

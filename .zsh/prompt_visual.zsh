@@ -13,8 +13,13 @@ function left-prompt {
   text_color='%{\e[38;5;'    # set text color
   back_color='%{\e[30;48;5;' # set background color
   reset='%{\e[0m%}'   # reset
-  sharp='\uE0B0'      # triangle
-  
+
+  if [[ "$TERM_PROGRAM" == "Apple_Terminal" ]]; then
+    sharp='>'
+  else
+    sharp='\uE0B0'
+  fi
+
   user="${back_color}${name_b}${text_color}${name_t}"
   dir="${back_color}${path_b}${text_color}${path_t}"
   echo "${user}%n%#@%m${back_color}${path_b}${text_color}${name_b}${sharp} ${dir}%~${reset}${text_color}${path_b}${sharp}${reset}\n${text_color}${arrow}→ ${reset}"

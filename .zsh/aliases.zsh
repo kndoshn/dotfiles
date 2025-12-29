@@ -8,9 +8,15 @@ alias readme='code README.md'
 alias gemfile='code Gemfile'
 alias makefile='code Makefile'
 alias ls='eza'
-alias la='eza -la --icons --git'
-alias ll='eza -l --icons --git'
-alias lt='eza -T --icons'
+if [[ "$TERM_PROGRAM" == "Apple_Terminal" ]]; then
+  alias la='eza -la --git'
+  alias ll='eza -l --git'
+  alias lt='eza -T'
+else
+  alias la='eza -la --icons --git'
+  alias ll='eza -l --icons --git'
+  alias lt='eza -T --icons'
+fi
 alias brewup='brew update && brew upgrade && brew cleanup && brew doctor'
 alias cat=bat
 alias cp='cp -i'
