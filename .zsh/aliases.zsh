@@ -83,6 +83,10 @@ alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
 
+mkcd() {
+  mkdir -p "$1" && cd "$1"
+}
+
 ## utilities
 alias path='echo $PATH | tr ":" "\n"'
 alias ports='lsof -i -P -n | grep LISTEN'
