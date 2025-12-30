@@ -82,6 +82,7 @@ alias rbp='be rails_best_practices'
 alias dcr='docker compose run app rails'
 
 ## node alias
+alias nr='npm run'
 alias npm-clean='rm -rf ./node_modules && npm cache clean --force && npm install'
 
 ## directory navigation
