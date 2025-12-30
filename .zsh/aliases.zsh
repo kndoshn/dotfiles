@@ -97,6 +97,10 @@ mkcd() {
 ## utilities
 alias path='echo $PATH | tr ":" "\n"'
 alias ports='lsof -i -P -n | grep LISTEN'
-alias myip='curl -s ifconfig.me'
+unalias myip 2>/dev/null
+myip() {
+  echo "Local:  $(ipconfig getifaddr en0 2>/dev/null || echo 'N/A')"
+  echo "Public: $(curl -s ifconfig.me)"
+}
 alias dsclean='sudo find / -name ".DS_Store" -type f -delete 2>/dev/null'
 alias reload='source ~/.zshrc'
