@@ -70,6 +70,7 @@
       "Bash(git ls-files:*)",
       "Bash(git switch:*)",
       "Bash(git restore:*)",
+      "Bash(git -C:*)",
       "Bash(brew:*)",
       "Bash(brew info:*)"
     ],
