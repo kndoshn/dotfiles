@@ -19,5 +19,10 @@ ln -sf ~/dotfiles/.gitignore-template ~/.gitignore-template
 ln -sf ~/dotfiles/claude/CLAUDE.md ~/.claude/CLAUDE.md
 ln -sf ~/dotfiles/claude/settings.json ~/.claude/settings.json
 
+# Codex
+ln -sf ~/dotfiles/codex/config.toml ~/.codex/config.toml
+ln -sf ~/dotfiles/codex/AGENTS.md ~/.codex/AGENTS.md
+ln -sf ~/dotfiles/codex/skills ~/.codex/skills
+
 # Ghostty
 ln -sf ~/dotfiles/ghostty/config ~/Library/Application\ Support/com.mitchellh.ghostty/config

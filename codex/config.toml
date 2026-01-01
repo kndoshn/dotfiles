@@ -1,0 +1,5 @@
+[projects."/Users/kndoshn"]
+trust_level = "untrusted"
+
+[projects."/Users/kndoshn/repos/agentimer"]
+trust_level = "trusted"
