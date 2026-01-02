@@ -1,30 +1,45 @@
 ## General aliases
 alias c='claude'
-alias code='code .'
 alias vi='/usr/bin/vim'
-alias xdd='rm ~/Library/Developer/Xcode/DerivedData/*'
-alias cdd='cd ~/repos/ditto/'
 alias readme='code README.md'
 alias gemfile='code Gemfile'
 alias makefile='code Makefile'
-alias ls='eza'
-if [[ "$TERM_PROGRAM" == "Apple_Terminal" ]]; then
-  alias la='eza -la --git'
-  alias ll='eza -l --git'
-  alias lt='eza -T'
-else
-  alias la='eza -la --icons --git'
-  alias ll='eza -l --icons --git'
-  alias lt='eza -T --icons'
-fi
-alias brewup='brew update && brew upgrade && brew cleanup && brew doctor'
-alias cat=bat
 alias cp='cp -i'
 alias mv='mv -i'
 alias dcom='docker compose'
 alias dbe='docker compose run app bundle exec'
 alias dbi='docker compose run app bundle install'
-alias rm='trash'
+
+# eza (if available)
+if command -v eza >/dev/null 2>&1; then
+  alias ls='eza'
+  if [[ "$TERM_PROGRAM" == "Apple_Terminal" ]]; then
+    alias la='eza -la --git'
+    alias ll='eza -l --git'
+    alias lt='eza -T'
+  else
+    alias la='eza -la --icons --git'
+    alias ll='eza -l --icons --git'
+    alias lt='eza -T --icons'
+  fi
+fi
+
+# bat (if available)
+if command -v bat >/dev/null 2>&1; then
+  alias cat=bat
+fi
+
+# macOS specific
+if [ "$(uname -s)" = "Darwin" ]; then
+  alias code='code .'
+  alias xdd='rm ~/Library/Developer/Xcode/DerivedData/*'
+  alias cdd='cd ~/repos/ditto/'
+  alias brewup='brew update && brew upgrade && brew cleanup && brew doctor'
+  alias dsclean='sudo find / -name ".DS_Store" -type f -delete 2>/dev/null'
+  if command -v trash >/dev/null 2>&1; then
+    alias rm='trash'
+  fi
+fi
 
 ## git wrapper
 git() {
@@ -99,8 +114,11 @@ alias path='echo $PATH | tr ":" "\n"'
 alias ports='lsof -i -P -n | grep LISTEN'
 unalias myip 2>/dev/null
 myip() {
-  echo "Local:  $(ipconfig getifaddr en0 2>/dev/null || echo 'N/A')"
+  if [ "$(uname -s)" = "Darwin" ]; then
+    echo "Local:  $(ipconfig getifaddr en0 2>/dev/null || echo 'N/A')"
+  else
+    echo "Local:  $(hostname -I 2>/dev/null | awk '{print $1}' || echo 'N/A')"
+  fi
   echo "Public: $(curl -s ifconfig.me)"
 }
-alias dsclean='sudo find / -name ".DS_Store" -type f -delete 2>/dev/null'
 alias reload='source ~/.zshrc'

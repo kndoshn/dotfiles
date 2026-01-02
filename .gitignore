@@ -1,1 +1,6 @@
 .DS_Store
+
+# Local overrides (not tracked)
+.zshenv.local
+.zprofile.local
+.zshrc.local
