@@ -43,13 +43,15 @@ if ! xcode-select -p &>/dev/null; then
 fi
 
 ## Homebrew
-if [ ! -x "$(which brew)" ]; then
+if ! command -v brew >/dev/null 2>&1; then
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi
 
-## Apple Silicon support
-if [ -d "/opt/homebrew/bin" ]; then
+## Homebrew env (Apple Silicon / Intel)
+if [ -x "/opt/homebrew/bin/brew" ]; then
   eval "$(/opt/homebrew/bin/brew shellenv)"
+elif [ -x "/usr/local/bin/brew" ]; then
+  eval "$(/usr/local/bin/brew shellenv)"
 fi
 
 brew update
